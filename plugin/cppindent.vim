@@ -1,9 +1,6 @@
-
 " assumes (at least) +0 in cinoptions
 function! CppIndentFunc()
-    let l:cline_num = line('.')
     let l:cline = getline(l:cline_num)
-
     let l:pline_num = prevnonblank(l:cline_num - 1)
     let l:pline = getline(l:pline_num)
     "while l:pline =~# '\(^\s*{\s*\|^\s*//\|^\s*/\*\|\*/\s*$\)'
@@ -142,5 +139,3 @@ set indentkeys+=0>
 set indentkeys+=0=
 set indentkeys+=0=::
 set cinoptions+=+0
-
-
